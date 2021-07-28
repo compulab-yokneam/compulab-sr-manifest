@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote fetch="https://git.linaro.org/people/paul.liu/systemready" name="linaro"/>
+    <remote fetch="https://github.com/ARMmbed" name="arm"/>
+    <remote fetch="https://github.com/compulab-yokneam" name="compulab"/>
+
+    <project name="optee_os"            remote="linaro" revision="linaro-master-cl-iot-gate"    path="sources/optee_os"/>
+    <project name="trusted-firmware-a"  remote="linaro" revision="imx8-tbbr-3"          	path="sources/trusted-firmware-a"/>
+    <project name="u-boot"              remote="linaro" revision="iot-gate-imx8-paulliu-master" path="sources/u-boot"/>
+
+    <remote fetch="https://github.com/ARMmbed" name="arm"/>
+    <project name="mbedtls"            remote="arm"	revision="bd21b18a1faa08705ac6d9980794c181e645f53a"              path="sources/mbedtls"/>
+
+    <project name="compulab-sr" remote="compulab" revision="master" path="sources/compulab-sr" >
+        <linkfile src="setup.sh" dest="setup.sh" />
+        <linkfile src="Makefile" dest="Makefile" />
+        <linkfile src="patches" dest="patches" />
+        <linkfile src="firmware" dest="sources/firmware" />
+    </project>
+
+</manifest>
